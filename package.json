@@ -5,10 +5,11 @@
     "start": "vite --host",
     "build:dev": "vite build",
     "build:production": "vite build -- --production",
-    "deploy": "npx --yes @needle-tools/cloud-cli@latest deploy ./dist"
+    "deploy": "npm run build:production & npx --yes @needle-tools/cloud-cli@latest deploy ./dist",
+    "deploy-only": "npx --yes @needle-tools/cloud-cli@latest deploy ./dist"
   },
   "dependencies": {
-    "@needle-tools/engine": "^3.47.3-beta",
+    "@needle-tools/engine": "^3.48.0-experimental.9",
     "three": "npm:@needle-tools/three@0.162.4"
   },
   "devDependencies": {
